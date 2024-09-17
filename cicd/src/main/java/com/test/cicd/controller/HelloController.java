@@ -21,4 +21,11 @@ public class HelloController {
         model.addAttribute("menuList", menuList);
         return "menu";
     }
+
+    @GetMapping("/menus")
+    public String menu2(Model model) {
+        List<MenuDTO> menuList = menuService.getMenu();
+        model.addAttribute("menuList", menuList);
+        return "menu";
+    }
 }
